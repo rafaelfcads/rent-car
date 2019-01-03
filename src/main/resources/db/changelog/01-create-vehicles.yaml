@@ -1,0 +1,27 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 1
+      author: rafaelreis
+      changes:
+        - createTable:
+            tableName: vehicle
+            columns:
+              - column:
+                  name: id
+                  type: serial
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+              - column:
+                  name: brand
+                  type: varchar(255)
+              - column:
+                  name: manufacturing_year 
+                  type: int
+              - column:
+                  name: mileage 
+                  type: float
