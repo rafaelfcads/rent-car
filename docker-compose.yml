@@ -2,35 +2,35 @@ version: '3'
 
 services:
   postgres:
-    container_name: spring_rest_data_postgres
+    container_name: car_rental_postgres
     image: postgres:11.1-alpine
     environment:
-      POSTGRES_USER: spring_rest_data
-      POSTGRES_PASSWORD: spring_rest_data
-      POSTGRES_DB: spring_rest_data
+      POSTGRES_USER: car_rental
+      POSTGRES_PASSWORD: car_rental
+      POSTGRES_DB: car_rental
     volumes:
-       - ~/storage/spring_rest_data/postgres:/data/postgres
+       - ~/storage/car_rental/postgres:/data/postgres
     ports:
       - "5433:5432"
     networks:
-      - spring_rest_data
+      - car_rental
     restart: always
 
   postgres_test:
-    container_name: spring_rest_data_postgres_test
+    container_name: car_rental_postgres_test
     image: postgres:11.1-alpine
     environment:
-      POSTGRES_USER: spring_rest_data
-      POSTGRES_PASSWORD: spring_rest_data
-      POSTGRES_DB: spring_rest_data_test
+      POSTGRES_USER: car_rental
+      POSTGRES_PASSWORD: car_rental
+      POSTGRES_DB: car_rental_test
     volumes:
-       - ~/storage/spring_rest_data/postgres:/data/postgres
+       - ~/storage/car_rental/postgres:/data/postgres
     ports:
       - "5434:5432"
     networks:
-      - spring_rest_data
+      - car_rental
     restart: always
 
 networks:
-  spring_rest_data:
+  car_rental:
     driver: bridge
