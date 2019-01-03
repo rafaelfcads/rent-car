@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  postgres:
+    container_name: spring_rest_data_postgres
+    image: postgres:11.1-alpine
+    environment:
+      POSTGRES_USER: spring_rest_data
+      POSTGRES_PASSWORD: spring_rest_data
+      POSTGRES_DB: spring_rest_data
+    volumes:
+       - ~/storage/spring_rest_data/postgres:/data/postgres
+    ports:
+      - "5433:5432"
+    networks:
+      - spring_rest_data
+    restart: always
+
+  postgres_test:
+    container_name: spring_rest_data_postgres_test
+    image: postgres:11.1-alpine
+    environment:
+      POSTGRES_USER: spring_rest_data
+      POSTGRES_PASSWORD: spring_rest_data
+      POSTGRES_DB: spring_rest_data_test
+    volumes:
+       - ~/storage/spring_rest_data/postgres:/data/postgres
+    ports:
+      - "5434:5432"
+    networks:
+      - spring_rest_data
+    restart: always
+
+networks:
+  challenge:
+    driver: bridge
