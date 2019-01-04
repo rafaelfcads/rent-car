@@ -11,7 +11,7 @@ services:
     volumes:
        - ~/storage/car_rental/postgres:/data/postgres
     ports:
-      - "5433:5432"
+      - "5436:5432"
     networks:
       - car_rental
     restart: always
@@ -26,7 +26,7 @@ services:
     volumes:
        - ~/storage/car_rental/postgres:/data/postgres
     ports:
-      - "5434:5432"
+      - "5437:5432"
     networks:
       - car_rental
     restart: always
