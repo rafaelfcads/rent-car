@@ -19,7 +19,7 @@ public class Vehicle {
 	
 	@Id
 	@NonNull
-	private Long id;
+	private long id;
 
 	@NonNull
 	private String name;
