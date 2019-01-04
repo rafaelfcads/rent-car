@@ -1,0 +1,19 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 3
+      author: rafaelreis
+      changes:
+        - createTable:
+            tableName: contract
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: code
+                  type: varchar(255)
