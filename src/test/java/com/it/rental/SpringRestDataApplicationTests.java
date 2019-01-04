@@ -1,4 +1,4 @@
-package com.it.springrestdata;
+package com.it.rental;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
