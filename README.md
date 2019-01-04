@@ -1,2 +1,2 @@
 # spring-rest-data
-Using Spring Rest Data
+Spring Rest Data using Postgres
