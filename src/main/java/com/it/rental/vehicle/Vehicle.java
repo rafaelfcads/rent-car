@@ -2,7 +2,10 @@ package com.it.rental.vehicle;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -18,6 +21,12 @@ import lombok.RequiredArgsConstructor;
 public class Vehicle {
 	
 	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq_vehicle_id")
+	@SequenceGenerator(
+	    name="seq_vehicle_id",
+	    sequenceName="seq_vehicle_id",
+	    allocationSize=20
+	)
 	@NonNull
 	private long id;
 
