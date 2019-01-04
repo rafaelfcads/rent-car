@@ -1,4 +1,4 @@
-package com.it.springrestdata.vehicle;
+package com.it.rental.vehicle;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

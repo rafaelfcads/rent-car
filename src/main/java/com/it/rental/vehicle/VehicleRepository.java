@@ -1,4 +1,4 @@
-package com.it.springrestdata.vehicle;
+package com.it.rental.vehicle;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
