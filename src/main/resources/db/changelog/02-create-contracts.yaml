@@ -17,3 +17,17 @@ databaseChangeLog:
               - column:
                   name: code
                   type: varchar(255)
+
+  - changeSet:
+      id: 4
+      author: rafaelreis
+      changes:
+        - createSequence:
+            catalogName: contract
+            cycle: true
+            incrementBy: 2
+            maxValue: 1000
+            minValue: 10
+            schemaName: public
+            sequenceName: seq_contract_id
+            startValue: 100
