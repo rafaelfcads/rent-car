@@ -1,6 +1,10 @@
 package com.it.rental.user;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -15,6 +19,13 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class User {
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="seq_user_id")
+	@SequenceGenerator(
+	    name="seq_user_id",
+	    sequenceName="seq_user_id",
+	    allocationSize=20
+	)
 	@NonNull
 	private long id;
 
