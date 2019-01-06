@@ -18,4 +18,16 @@ databaseChangeLog:
                   name: name
                   type: varchar(255)
 
-  
+  - changeSet:
+      id: 6
+      author: rafaelreis
+      changes:
+        - createSequence:
+            catalogName: user
+            cycle: true
+            incrementBy: 2
+            maxValue: 1000
+            minValue: 10
+            schemaName: public
+            sequenceName: seq_user_id
+            startValue: 100
