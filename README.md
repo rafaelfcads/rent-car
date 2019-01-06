@@ -1,2 +1,2 @@
-# Aplicando o guia de referência Spring Data REST
+# Aplicando o guia de referência Spring Data REST(Banco Relacional)
 
