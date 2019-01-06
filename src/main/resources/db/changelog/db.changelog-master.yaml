@@ -3,3 +3,9 @@ databaseChangeLog:
   - include:
       file: 01-create-vehicles.yaml
       relativeToChangelogFile: true
+  - include:
+      file: 02-create-contracts.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: 03-create-users.yaml
+      relativeToChangelogFile: true
