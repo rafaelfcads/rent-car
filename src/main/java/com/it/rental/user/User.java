@@ -26,10 +26,16 @@ public class User {
 	    sequenceName="seq_user_id",
 	    allocationSize=20
 	)
-	@NonNull
+	
 	private long id;
 
 	@NonNull
 	private String name;
+	
+	@NonNull
+	private String lastName;
+	
+	@NonNull
+	private String email;
 
 }
