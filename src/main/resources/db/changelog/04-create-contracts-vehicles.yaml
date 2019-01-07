@@ -1,0 +1,24 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: 5
+      author: rafaelreis
+      changes:
+        - createTable:
+            tableName: contract_vehicle
+            columns:
+              - column:
+                  name: contract_id
+                  type: integer
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: integer
+                  constraints:
+                    nullable: false
+                  
+                  
+                  
+
+   
