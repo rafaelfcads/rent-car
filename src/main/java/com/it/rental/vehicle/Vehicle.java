@@ -27,7 +27,7 @@ public class Vehicle {
 	    sequenceName="seq_vehicle_id",
 	    allocationSize=20
 	)
-	@NonNull
+
 	private long id;
 
 	@NonNull
@@ -36,11 +36,9 @@ public class Vehicle {
 	@NonNull
 	private String brand;
 	
-	@NonNull
 	@Column(name = "manufacturing_year")
 	private int manufacturingYear;
 	
-	@NonNull
 	private float mileage;
 
 }

@@ -26,7 +26,7 @@ public class Contract {
 	    sequenceName="seq_contract_id",
 	    allocationSize=20
 	)
-	@NonNull
+
 	private long id;
 
 	@NonNull
