@@ -8,17 +8,17 @@ databaseChangeLog:
             tableName: contract_vehicle
             columns:
               - column:
-                  name: contract_id
+                  name: contract
                   type: integer
                   constraints:
                     nullable: false
+                    foreignKeyName: contract_fk
+                    references: contract(id)
               - column:
-                  name: user_id
+                  name: user
                   type: integer
                   constraints:
                     nullable: false
+                    foreignKeyName: user_fk
+                    references: user(id)
                   
-                  
-                  
-
-   
