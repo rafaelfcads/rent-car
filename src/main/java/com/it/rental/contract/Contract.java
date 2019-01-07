@@ -5,14 +5,17 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 
+import com.it.rental.user.User;
 import com.it.rental.vehicle.Vehicle;
 
 import lombok.Data;
@@ -35,12 +38,17 @@ public class Contract {
 	    sequenceName="seq_contract_id",
 	    allocationSize=20
 	)
-
 	private long id;
 
 	@NonNull
 	private String code;
 	
+	@NonNull
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
+	
+	@NonNull
 	@ManyToMany(cascade = {
         CascadeType.PERSIST,
         CascadeType.MERGE

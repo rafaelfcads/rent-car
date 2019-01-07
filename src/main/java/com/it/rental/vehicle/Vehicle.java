@@ -33,7 +33,6 @@ public class Vehicle {
 	    sequenceName="seq_vehicle_id",
 	    allocationSize=20
 	)
-
 	private long id;
 
 	@NonNull
@@ -47,6 +46,7 @@ public class Vehicle {
 	
 	private float mileage;
 	
+	@NonNull
 	@ManyToMany(mappedBy = "vehicles")
     private List<Contract> contracts = new ArrayList<Contract>();
 
