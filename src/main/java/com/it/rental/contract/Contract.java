@@ -14,6 +14,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 import com.it.rental.user.User;
 import com.it.rental.vehicle.Vehicle;
@@ -41,6 +43,8 @@ public class Contract {
 	private long id;
 
 	@NonNull
+	@NotBlank
+    @Size(min = 1, max = 20)
 	private String code;
 	
 	@NonNull

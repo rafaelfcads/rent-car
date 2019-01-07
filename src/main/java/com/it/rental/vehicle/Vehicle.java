@@ -10,6 +10,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 
 import com.it.rental.contract.Contract;
 
@@ -36,9 +38,13 @@ public class Vehicle {
 	private long id;
 
 	@NonNull
+	@NotBlank
+    @Size(min = 1, max = 20)
 	private String name;
 	
 	@NonNull
+	@NotBlank
+    @Size(min = 1, max = 20)
 	private String brand;
 	
 	@Column(name = "manufacturing_year")
