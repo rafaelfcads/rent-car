@@ -1,2 +1,2 @@
-# Aplicando o guia de ref. Spring Data REST - POSTGRESQL + Swagger
+# Aplicando o guia de ref. Spring Data REST - POSTGRESQL + Liquibase + Swagger
 
