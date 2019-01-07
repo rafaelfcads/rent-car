@@ -1,11 +1,17 @@
 package com.it.rental.vehicle;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.SequenceGenerator;
+
+import com.it.rental.contract.Contract;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -40,5 +46,8 @@ public class Vehicle {
 	private int manufacturingYear;
 	
 	private float mileage;
+	
+	@ManyToMany(mappedBy = "vehicles")
+    private List<Contract> contracts = new ArrayList<Contract>();
 
 }
